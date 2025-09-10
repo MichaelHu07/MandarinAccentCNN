@@ -2,7 +2,9 @@
 
 import torch
 import torchvision
+from torchvision import datasets
 import torchvision.transforms as transforms
+from torchvision.transforms import ToTensor
 import torch.nn as nn
 import torch.optim as optim
 import torch.nn.functional as F
@@ -53,7 +55,7 @@ from tqdm.notebook import trange, tqdm
 if __name__ == '__main__':
         # load data from folder into numpy array
     folder_path = os.path.join(os.path.dirname(__file__), r"data\WAV")
-    wave_array = []
+    wave_array = [] # wave_array contains [ y , Filename ]
     for filename in os.listdir(folder_path):  # looping through every file in WAV folder
         if filename.endswith(".wav"):
             file_path = os.path.join(folder_path, filename)
@@ -75,7 +77,8 @@ if __name__ == '__main__':
     # print(spk_region[:5])
 
     # matching wav amplitudes to speaker region
-    train_test_array = []
+    train_test_array = [] #train_test_array contains [ y , spk_region ]
+                          #y contains [ amplitudes at 16,000 sr , y.shape , dtype]
     for array in wave_array:
         filename = array[1]
         for idx, sid in enumerate(spk_id):
@@ -91,6 +94,11 @@ if __name__ == '__main__':
     # plt.xlabel("Time (s)")
     # plt.ylabel("Amplitude")
     # plt.show()
+
+
+
+
+
 
 
 
