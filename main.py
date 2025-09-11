@@ -56,12 +56,23 @@ if __name__ == '__main__':
         # load data from folder into numpy array
     folder_path = os.path.join(os.path.dirname(__file__), r"data\WAV")
     wave_array = [] # wave_array contains [ y , Filename ]
+    spectro_array = [] # spectro_array contains [ D ]
     for filename in os.listdir(folder_path):  # looping through every file in WAV folder
         if filename.endswith(".wav"):
             file_path = os.path.join(folder_path, filename)
             y, sr = librosa.load(file_path, sr=16000)  # obtaining y (amplitude), and sr (sample rate)
             wave_array.append([y, filename])
+            D = np.abs(librosa.stft(y, n_fft = 512))
+            spectro_array.append(D)
             print(f"Loaded: {filename}, Shape: {y.shape}")
+
+    fig, ax = plt.subplot()
+    img = librosa.display.specshow(librosa.amplitude_to_db(spectro_array[0],
+                                                           ref = np.max),
+                                   y_axis = 'log', x_axis = 'time', ax = ax)
+    ax.set_title('Power Spectrogram')
+    fig.colorbar(img, ax=ax, format = "%+2.0f dB")
+
 
     spk_filepath = os.path.join(os.path.dirname(__file__), r"data\SPKINFO.txt")
     df = pd.read_csv(spk_filepath, sep="\t")  # convert txt to dataframe
