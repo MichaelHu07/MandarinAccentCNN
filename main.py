@@ -7,7 +7,7 @@ import torchvision.transforms as transforms
 from torchvision.transforms import ToTensor
 import torch.nn as nn
 import torch.optim as optim
-import torch.nn.functional as F
+import torch.nn.functional as f
 from torch.utils.data import Dataset, DataLoader
 from torchsummary import summary
 from torchview import draw_graph
@@ -52,27 +52,60 @@ from scipy.io import wavfile
 import sklearn
 from tqdm.notebook import trange, tqdm
 
+
+
 if __name__ == '__main__':
         # load data from folder into numpy array
-    folder_path = os.path.join(os.path.dirname(__file__), r"data\WAV")
+    folder_path = os.path.join(os.getcwd(), r"data\WAV")
+    stft_path = os.path.join(os.getcwd(), r"data\STFT")
+    wave_path = os.path.join(os.getcwd(), r"data\WAVE")
+    os.makedirs(stft_path, exist_ok=True)
+    os.makedirs(wave_path, exist_ok=True)
+
     wave_array = [] # wave_array contains [ y , Filename ]
     spectro_array = [] # spectro_array contains [ D ]
     for filename in os.listdir(folder_path):  # looping through every file in WAV folder
         if filename.endswith(".wav"):
+            wave_file = os.path.join(wave_path, filename.replace(".wav", ".npy"))
+            stft_file = os.path.join(stft_path, filename.replace(".wav", "_1.npy"))
             file_path = os.path.join(folder_path, filename)
-            y, sr = librosa.load(file_path, sr=16000)  # obtaining y (amplitude), and sr (sample rate)
-            wave_array.append([y, filename])
-            D = np.abs(librosa.stft(y, n_fft = 512))
-            spectro_array.append(D)
-            print(f"Loaded: {filename}, Shape: {y.shape}")
 
-    fig, ax = plt.subplot()
+            if (os.path.exists(wave_file)):
+                continue
+            else:
+                y, sr = librosa.load(file_path, sr=16000)  # obtaining y (amplitude), and sr (sample rate)
+                np.save(wave_file, y)
+                print(f"Loaded: {filename}, Shape: {y.shape}")
+
+            if (os.path.exists(stft_file)):
+                continue
+            else:
+                D = np.abs(librosa.stft(y, n_fft=400, hop_length=160, win_length=400))
+                np.save(stft_file, D)
+                print(f"Processed: {filename}")
+
+    for filename in os.listdir(wave_path):
+        path = os.path.join(wave_path, filename)
+        if filename.endswith(".npy"):
+            wave_array.append([np.load(path), filename])
+            print(f"\'{filename}\' Loaded")
+    for filename in os.listdir(stft_path):
+        path = os.path.join(stft_path, filename)
+        if filename.endswith(".npy"):
+            spectro_array.append(np.load(path))
+            print(f"\'{filename}\' Loaded")
+
+
+
+
+    fig, ax = plt.subplots()
     img = librosa.display.specshow(librosa.amplitude_to_db(spectro_array[0],
                                                            ref = np.max),
                                    y_axis = 'log', x_axis = 'time', ax = ax)
     ax.set_title('Power Spectrogram')
     fig.colorbar(img, ax=ax, format = "%+2.0f dB")
 
+    plt.show()
 
     spk_filepath = os.path.join(os.path.dirname(__file__), r"data\SPKINFO.txt")
     df = pd.read_csv(spk_filepath, sep="\t")  # convert txt to dataframe
