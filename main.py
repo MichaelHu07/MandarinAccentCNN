@@ -11,6 +11,7 @@ import torch.optim as optim
 import torch.nn.functional as f
 from torch.utils.data import Dataset, DataLoader
 from torchvision.models import resnet18, ResNet18_Weights
+from torch.utils.data import random_split
 from torchsummary import summary
 from torchview import draw_graph
 import torchaudio
@@ -61,19 +62,37 @@ from dataloader import load_data
 
 if __name__ == '__main__':
     model = resnet18(weights = ResNet18_Weights.DEFAULT)
-    labeled_data = load_data()
-    print(f"Labeled_data check: {labeled_data}")
+    full_dataset = load_data()
 
-    print("Data Splitting commencing")
-    np_data = np.array([])
-    np_label = np.array([])
-    for i, array in enumerate(labeled_data):
-        np_data = np.append(np_data, array[0])
-        np_label = np.append(np_label, array[1])
-        print(f"Splitting: {i}")
+    split_percentage = 0.8
 
-    print(f"np_data contains: {np_data}")
-    print(f"np_label contains: {np_label}")
+    train_size = int(split_percentage * len(full_dataset))
+    test_size = len(full_dataset) - train_size
+
+    train_dataset, test_dataset = random_split(full_dataset, [train_size, test_size])
+    train_dataloader = DataLoader(train_dataset, batch_size=32, shuffle=True)
+    test_dataloader = DataLoader(test_dataset, batch_size=32, shuffle=False)
+
+
+
+
+
+
+
+#Deprecated:
+
+    #print(f"Labeled_data check: {labeled_data}")
+
+    #print("Data Splitting commencing")
+    #np_data = np.array([])
+    #np_label = np.array([])
+    #for i, array in enumerate(labeled_data):
+    #    np_data = np.append(np_data, array[0])
+    #    np_label = np.append(np_label, array[1])
+    #    print(f"Splitting: {i}")
+
+    #print(f"np_data contains: {np_data}")
+    #print(f"np_label contains: {np_label}")
 
 
 
