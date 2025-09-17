@@ -61,6 +61,9 @@ from dataloader import load_data
 
 
 if __name__ == '__main__':
+    device = torch.accelerator.current_accelerator().type if torch.accelerator.is_available() else "cpu"
+    print(f"Using {device} device")
+
     model = resnet18(weights = ResNet18_Weights.DEFAULT)
     full_dataset = load_data()
 
@@ -72,6 +75,7 @@ if __name__ == '__main__':
     train_dataset, test_dataset = random_split(full_dataset, [train_size, test_size])
     train_dataloader = DataLoader(train_dataset, batch_size=32, shuffle=True)
     test_dataloader = DataLoader(test_dataset, batch_size=32, shuffle=False)
+
 
 
 
