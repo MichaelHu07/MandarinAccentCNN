@@ -61,7 +61,10 @@ from dataloader import load_data
 
 
 if __name__ == '__main__':
-    device = torch.accelerator.current_accelerator().type if torch.accelerator.is_available() else "cpu"
+    print(torch.__version__)
+    print(torch.version.cuda)
+    print(torch.cuda.device_count())
+    device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     print(f"Using {device} device")
 
     model = resnet18(weights = ResNet18_Weights.DEFAULT)
