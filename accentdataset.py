@@ -29,6 +29,9 @@ class AccentDataSet(Dataset):
     def __len__(self):
         return len(self.files)
 
+    def label_length(self):
+        return len(self.region2id)
+
     def __getitem__(self, idx):
         file_name = self.files[idx]
         file_path = os.path.join(self.stft_path, file_name)
