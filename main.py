@@ -95,11 +95,14 @@ if __name__ == '__main__':
         running_loss = 0.0
         for i, data in enumerate(train_dataloader,0):
             inputs, label = data
+            inputs = inputs.to(device)
+            label = label.to(device)
 
             optimizer.zero_grad()
 
             outputs = model(inputs)
             loss = criterion(outputs, label)
+            loss.backward()
             optimizer.step()
 
             running_loss += loss.item()
@@ -110,19 +113,34 @@ if __name__ == '__main__':
 
     print("Finished training")
 
-    PATH = os.path.join(os.getcwd(), r"\MODELS")
+    PATH = os.path.join(os.getcwd(), r"\MODELS\resnet18_accents.pth")
     torch.save(model.state_dict(), PATH)
 
     model.load_state_dict(torch.load(PATH, weights_only=True))
 
-    for i, data in enumerate(test_dataloader):
-        spectrogram, label = data
-        outputs = model(spectrogram)
 
-        _, predicted = torch.max(outputs, 1)
+    correct = 0
+    total = 0
+    with torch.no_grad():
+        for data in test_dataloader:
+            spectrograms, labels = data
+            spectrograms = spectrograms.to(device)
+            labels = labels.to(device)
+            outputs = model(spectrograms)
 
-        print('Predicted: ', ' '.join(f'{label[predicted[j]]:5s}'
-                                      for j in range(4)))
+            _, predicted = torch.max(outputs, 1)
+
+            total += labels.size(0)
+            correct += (predicted == labels).sum().item()
+
+    print(f"Accuracy: {100 * correct/total}%")
+
+
+
+
+
+
+
 
 
 
