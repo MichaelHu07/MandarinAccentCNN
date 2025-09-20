@@ -36,6 +36,9 @@ class AccentDataSet(Dataset):
         file_name = self.files[idx]
         file_path = os.path.join(self.stft_path, file_name)
         stft_file = np.load(file_path)
+        stft_file = torch.as_tensor(stft_file, dtype=torch.float32)
+        if stft_file.ndim == 2:
+            stft_file.unsqueeze(0)
         spk_id = file_name.split(sep = "_")[3] # filenames are *****_*****_*_spkid_1.npy
         region = self.spk_id2region.get(spk_id, None) # grabbing region from spkid to region dict, None otherwise
         if region is None:

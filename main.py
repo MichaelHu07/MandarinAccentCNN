@@ -3,6 +3,7 @@
 import torch
 import torchvision
 from numba.np.npyfuncs import np_datetime_isnat_impl
+from torch.nn import Conv2d
 from torchvision import datasets
 import torchvision.transforms as transforms
 from torchvision.transforms import ToTensor
@@ -56,7 +57,7 @@ from scipy.io import wavfile
 import sklearn
 from tqdm.notebook import trange, tqdm
 
-from dataloader import load_data
+from dataloader import load_data, collate_fn
 
 
 
@@ -81,11 +82,20 @@ if __name__ == '__main__':
     test_size = len(full_dataset) - train_size
 
     train_dataset, test_dataset = random_split(full_dataset, [train_size, test_size])
-    train_dataloader = DataLoader(train_dataset, batch_size=32, shuffle=True)
-    test_dataloader = DataLoader(test_dataset, batch_size=32, shuffle=False)
+    train_dataloader = DataLoader(train_dataset, batch_size=32, shuffle=True, collate_fn=collate_fn)
+    test_dataloader = DataLoader(test_dataset, batch_size=32, shuffle=False, collate_fn=collate_fn)
+
+    model.conv1 = Conv2d(
+        in_channels = 1,
+        out_channels = 64,
+        kernel_size = 3
+    )
+
+    model.maxpool = nn.Identity()
 
     model.fc = nn.Linear(512, full_dataset.label_length())
     model.fc.requires_grad = True
+
 
     criterion = nn.CrossEntropyLoss()
     optimizer = optim.SGD(model.parameters(), lr=0.0001, momentum=0.9)
@@ -114,6 +124,7 @@ if __name__ == '__main__':
     print("Finished training")
 
     PATH = os.path.join(os.getcwd(), r"\MODELS\resnet18_accents.pth")
+    os.makedirs(os.path.dirname(PATH), exist_ok=True)
     torch.save(model.state_dict(), PATH)
 
     model.load_state_dict(torch.load(PATH, weights_only=True))

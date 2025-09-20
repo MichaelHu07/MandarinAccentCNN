@@ -10,8 +10,26 @@ import torch.utils.data.dataset
 import torch.utils.data.dataloader
 from torchvision import datasets
 from torchvision.transforms import ToTensor
+import torch.nn.functional as F
 
 from accentdataset import AccentDataSet
+
+def collate_fn(batch):
+    spectrograms, labels = zip(*batch)
+    max_length = max(s.shape[-1] for s in spectrograms)
+
+    padded_spectrograms = []
+    for s in spectrograms:
+        if s.shape[-1] < max_length:
+            pad_size = max_length - s.shape[-1]
+            s = F.pad(s, (0, pad_size))
+        padded_spectrograms.append(s)
+
+    spectrograms_tensor = torch.stack(padded_spectrograms)
+    labels_tensor = torch.tensor(labels, dtype=torch.long)
+
+    return spectrograms_tensor, labels_tensor
+
 
 
 def load_data():
