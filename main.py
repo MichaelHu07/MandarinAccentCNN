@@ -70,7 +70,6 @@ if __name__ == '__main__':
     print(f"Using {device} device")
 
     model = resnet18(weights = ResNet18_Weights.DEFAULT)
-    model = model.to(device)
     full_dataset = load_data()
 
     for param in model.parameters():
@@ -95,6 +94,8 @@ if __name__ == '__main__':
 
     model.fc = nn.Linear(512, full_dataset.label_length())
     model.fc.requires_grad = True
+
+    model = model.to(device)
 
 
     criterion = nn.CrossEntropyLoss()

@@ -12,7 +12,7 @@ from torchvision.transforms import ToTensor
 
 
 class AccentDataSet(Dataset):
-    def __init__(self, stft_path, label_file, transform = None, target_transform = None):
+    def __init__(self, stft_path, label_file, transform = None, target_transform = None, sr = 16000, chunk_duration = 3.0):
         self.stft_path = stft_path
         self.files = [f for f in os.listdir(stft_path) if f.endswith(".npy")] # array of .npy filenames
         labels = pd.read_csv(label_file, sep= "\t") # converts csv file into a table with columns and headers

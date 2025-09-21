@@ -48,8 +48,10 @@ def load_data():
                 continue
             else:
                 y, sr = librosa.load(file_path, sr=16000)  # obtaining y (amplitude), and sr (sample rate)
-                D = np.abs(librosa.stft(y, n_fft=400, hop_length=160, win_length=400))
-                np.save(stft_file, D)
+                intervals = librosa.effects.split(y, top_db=30)
+                processed = np.concatenate([y[start:end] for start, end in intervals])
+                d = np.abs(librosa.stft(processed, n_fft=400, hop_length=160, win_length=400))
+                np.save(stft_file, d)
                 print(f"Processed: {filename}")
 
 
