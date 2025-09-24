@@ -2,14 +2,9 @@ import os
 import librosa
 import librosa.display
 import numpy  as np
-import matplotlib
-import matplotlib.pyplot as plt
-import pandas as pd
 import torch
 import torch.utils.data.dataset
 import torch.utils.data.dataloader
-from torchvision import datasets
-from torchvision.transforms import ToTensor
 import torch.nn.functional as F
 
 from accentdataset import AccentDataSet
@@ -61,73 +56,10 @@ def load_data():
             print(f"\'{filename}\' Loaded")
 
     spk_filepath = os.path.join(os.getcwd(), r"data\SPKINFO.txt")
-    #df = pd.read_csv(spk_filepath, sep="\t")  # convert txt to dataframe
-    #spk_id = df["SPEAKER_ID"]
-    #spk_region = df["PLACE_OF_BIRTH"]
 
     training_dataset = AccentDataSet(stft_path, spk_filepath, 8000)
 
     print("Loading complete")
 
     return training_dataset
-
-
-
-
-
-
-
-#Deprecated Snippets from array loading version:
-
-    #wave_path = os.path.join(os.getcwd(), r"data\WAVE")
-    #os.makedirs(wave_path, exist_ok=True)
-
-    #wave_array = []  # wave_array contains [ y , Filename ]
-    #spectro_array = []  # spectro_array contains [ D ]
-            # wave_file = os.path.join(wave_path, filename.replace(".wav", ".npy"))
-            #if os.path.exists(wave_file):
-                #continue
-            #else:
-                #y, sr = librosa.load(file_path, sr=16000)  # obtaining y (amplitude), and sr (sample rate)
-                #np.save(wave_file, y)
-                #print(f"Loaded: {filename}, Shape: {y.shape}")
-
-    #for filename in os.listdir(wave_path):
-        #path = os.path.join(wave_path, filename)
-        #if filename.endswith(".npy"):
-            #wave_array.append([np.load(path), filename])
-            #print(f"\'{filename}\' Loaded")
-
-    #fig, ax = plt.subplots()
-    #img = librosa.display.specshow(librosa.amplitude_to_db(spectro_array[4][0],
-    #                                                       ref=np.max),
-    #                               y_axis='log', x_axis='time', ax=ax)
-    #ax.set_title('Power Spectrogram')
-    #fig.colorbar(img, ax=ax, format="%+2.0f dB")
-
-    # categorize dataframe into each category
-    #info_array = df.to_numpy()
-    #genders = df["GENDER"].to_numpy()
-    #ages = df["AGE"].to_numpy()
-
-    # print(spk_id[:5])
-    # print(spk_region[:5])
-
-    # matching wav amplitudes to speaker region
-    #train_test_array = []  # train_test_array contains [ D , spk_region ]
-    #for i, (D, filename) in enumerate(spectro_array):
-    #    for idx, sid in enumerate(spk_id):
-    #        if sid in filename:
-    #            train_test_array.append([D, spk_region[idx]])
-    #            break
-
-
-
-    # waveform display
-    #   plt.figure(figsize=(10, 4))
-    # librosa.display.waveshow(wavearray[int(len(wavearray)*random.random())][0], sr = 16000)
-    # plt.title("Waveform")
-    # plt.xlabel("Time (s)")
-    # plt.ylabel("Amplitude")
-    # plt.show()
 

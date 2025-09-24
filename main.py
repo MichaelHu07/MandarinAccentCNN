@@ -1,62 +1,13 @@
 #pytorch imports
 
 import torch
-import torchvision
-from numba.np.npyfuncs import np_datetime_isnat_impl
 from torch.nn import Conv2d
-from torchvision import datasets
-import torchvision.transforms as transforms
-from torchvision.transforms import ToTensor
 import torch.nn as nn
-import torch.optim as optim
-import torch.nn.functional as f
 from torch import optim
-from torch.utils.data import Dataset, DataLoader
+from torch.utils.data import DataLoader
 from torchvision.models import resnet18, ResNet18_Weights
 from torch.utils.data import random_split
-from torchsummary import summary
-from torchview import draw_graph
-import torchaudio
-
-#accuracy metrics
-
-from sklearn.metrics import (
-    accuracy_score,
-    f1_score,
-    precision_score,
-    log_loss,
-    recall_score,
-    confusion_matrix
-)
-
-#model selection imports
-
-from sklearn.model_selection import (
-    train_test_split,
-    GridSearchCV,
-    cross_val_score,
-    StratifiedKFold,
-    learning_curve,
-    StratifiedShuffleSplit
-)
-
-
-import wave
-import random
-import numpy as np
-import pandas as pd
-import librosa
-import librosa.display
-import soundfile as sf
 import os
-import matplotlib.pyplot as plt
-import matplotlib
-
-from skimage.transform import resize
-from scipy.io import wavfile
-import sklearn
-from tqdm.notebook import trange, tqdm
-
 from dataloader import load_data, collate_fn
 
 
@@ -147,47 +98,3 @@ if __name__ == '__main__':
             correct += (predicted == labels).sum().item()
 
     print(f"Accuracy: {100 * correct/total}%")
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-#Deprecated:
-
-    #print(f"Labeled_data check: {labeled_data}")
-
-    #print("Data Splitting commencing")
-    #np_data = np.array([])
-    #np_label = np.array([])
-    #for i, array in enumerate(labeled_data):
-    #    np_data = np.append(np_data, array[0])
-    #    np_label = np.append(np_label, array[1])
-    #    print(f"Splitting: {i}")
-
-    #print(f"np_data contains: {np_data}")
-    #print(f"np_label contains: {np_label}")
-
-
-
-
-
-
-
-
-
-
-
