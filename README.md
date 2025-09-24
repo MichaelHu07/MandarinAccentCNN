@@ -8,13 +8,13 @@ Classify Audio Files Using ResNet Convolutional Neural Network
 2. Check if processed spectrograms are present in the data cache
     - If not present: Remove Silence (Split speaking sections by decibel thresholds)
     - Generate a Spectrogram numpy array using the Short-time Fourier Transform
-    - Save in Data\Stft folder
-3. Initialize AccentDataset Object
+    - Save in `Data\Stft` folder
+3. Initialize `AccentDataset` Object
 4. Freeze pretrained Resnet18 Hidden layers
 5. Fine-tune ResNet18 input and output layer
     - loss-function: Cross Entropy Loss
     - optimizer: Stochastic Gradient Descent
-6. Iterate through dataset `{epoch}` number of times
+6. Iterate through the dataset `epoch` number of times
 7. Load trained model, validate on the test dataset
 8. Print Final Accuracy.
 
