@@ -20,9 +20,9 @@ Classify Audio Files Using ResNet Convolutional Neural Network
 
 ## Default Model Settings
 
-Epochs: 2
+Epochs: 2 # (40-50 recommended for stronger hardware)
 
-Batches: 1 
+Batches: 1 # (32-64 recommended for stronger hardware)
 
 Train/Test Split: 80/20
         - Convolutional Layer 1
@@ -39,7 +39,7 @@ Momentum: 0.9
         
 Sample Rate: 16000 
 
-Chunk duration: 1 
+Chunk duration: 1 # ( 0.01 - 3.0 Recommended)
 
 Decibel Threshold: 30 
 
