@@ -65,7 +65,7 @@ def load_data():
     #spk_id = df["SPEAKER_ID"]
     #spk_region = df["PLACE_OF_BIRTH"]
 
-    training_dataset = AccentDataSet(stft_path, spk_filepath)
+    training_dataset = AccentDataSet(stft_path, spk_filepath, 8000)
 
     print("Loading complete")
 

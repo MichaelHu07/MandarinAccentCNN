@@ -81,13 +81,14 @@ if __name__ == '__main__':
     test_size = len(full_dataset) - train_size
 
     train_dataset, test_dataset = random_split(full_dataset, [train_size, test_size])
-    train_dataloader = DataLoader(train_dataset, batch_size=32, shuffle=True, collate_fn=collate_fn)
-    test_dataloader = DataLoader(test_dataset, batch_size=32, shuffle=False, collate_fn=collate_fn)
+    train_dataloader = DataLoader(train_dataset, batch_size=1, shuffle=True, collate_fn=collate_fn)
+    test_dataloader = DataLoader(test_dataset, batch_size=1, shuffle=False, collate_fn=collate_fn)
 
     model.conv1 = Conv2d(
         in_channels = 1,
         out_channels = 64,
-        kernel_size = 3
+        kernel_size = 3,
+        padding = 1
     )
 
     model.maxpool = nn.Identity()
@@ -99,7 +100,7 @@ if __name__ == '__main__':
 
 
     criterion = nn.CrossEntropyLoss()
-    optimizer = optim.SGD(model.parameters(), lr=0.0001, momentum=0.9)
+    optimizer = optim.SGD(model.parameters(), lr=0.001, momentum=0.9)
 
     for epoch in range(2):
 
@@ -124,11 +125,11 @@ if __name__ == '__main__':
 
     print("Finished training")
 
-    PATH = os.path.join(os.getcwd(), r"\MODELS\resnet18_accents.pth")
+    PATH = os.path.join(os.getcwd(), "MODELS", "resnet18_accents.pth")
     os.makedirs(os.path.dirname(PATH), exist_ok=True)
     torch.save(model.state_dict(), PATH)
 
-    model.load_state_dict(torch.load(PATH, weights_only=True))
+    model.load_state_dict(torch.load(PATH))
 
 
     correct = 0
