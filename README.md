@@ -41,5 +41,7 @@ Sample Rate: 16000
 
 Chunk duration: 1 # ( 0.01 - 3.0 Recommended)
 
+Hop length: 8000 # (25% - 50% Overlap Recommended) - 
+
 Decibel Threshold: 30 
 
