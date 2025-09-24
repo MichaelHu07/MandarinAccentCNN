@@ -45,3 +45,10 @@ Hop length: 8000 # (25% - 50% Overlap Recommended) -
 
 Decibel Threshold: 30 
 
+## DATA
+
+Data sourced from: https://magichub.com/datasets/mandarin-heavy-accent-conversational-speech-corpus/
+
+Preprocessed Preview set provided in `data` folder. 
+
+
