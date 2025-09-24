@@ -16,4 +16,4 @@ Classify Audio Files Using ResNet Convolutional Neural Network
     - optimizer: Stochastic Gradient Descent
 6. Run specified number of Epochs
 7. Load Trained model, validate on test dataset
-8. Return Accuracy.
+8. Print Final Accuracy.
