@@ -21,15 +21,28 @@ Classify Audio Files Using ResNet Convolutional Neural Network
 ## Default Model Settings
 
 Epochs: 2
+
 Batches: 1 
+
 Train/Test Split: 80/20
+
         - Convolutional Layer 1
+        
 Kernel Size: 3x3
+
 Padding: 1
+
         - Optimizer: Stochastic Gradient Descent
+        
 Learning rate: 0.001
+
 Momentum: 0.9
+
         - Spectrogram Settings
+        
 Sample Rate: 16000 
+
 Chunk duration: 1 
+
 Decibel Threshold: 30 
+
