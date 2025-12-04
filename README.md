@@ -1,6 +1,18 @@
+#IMPORTANT
+
+This project was developed using **Python 3.12.6**.
+Download **cuda 13.0**
+
 # Introduction
 
 Classify Regional Mandarin Accents from Audio using Tencent Wav2Vec2 Transformer Model.
+
+## Dependencies/packages
+
+Install dependencies:
+```bash
+pip install -r requirements.txt
+```
 
 ## Training Process
 
