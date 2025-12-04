@@ -1,0 +1,139 @@
+CHANNEL	SPEAKER_ID	GENDER	AGE	PLACE_OF_BIRTH	PLACE_OF_RESIDENCE	DEVICE
+C0	SPK002	Male	23	CHINA,Henan	CHINA,Henan	iPhone X 15.2
+C0	SPK003	Male	27	CHINA,Henan	CHINA,Henan	iPhone XS 15.2.1
+C0	SPK009	Female	35	CHINA,Sichuan	CHINA,Sichuan	OPPO PEGM00 Android 11
+C0	SPK013	Male	22	CHINA,Guangdong	CHINA,Guangdong	iPhone
+C0	SPK015	Male	36	CHINA,Henan	CHINA,Henan	HUAWEI GLK-AL00 Android 10
+C0	SPK016	Male	40	CHINA,Henan	CHINA,Henan	OPPO PFJM10 Android 11
+C0	SPK016	Male	36	CHINA,Henan	CHINA,Henan	OPPO PFJM10 Android 11
+C0	SPK015	Male	36	CHINA,Henan	CHINA,Henan	HUAWEI GLK-AL00 Android 10
+C0	SPK021	Male	30	CHINA,Sichuan	CHINA,Sichuan	HUAWEI DUB-AL00a Android 8
+C0	SPK021	Male	30	CHINA,Sichuan	CHINA,Sichuan	HUAWEI DUB-AL00a Android 8
+C0	SPK022	Male	30	CHINA,Sichuan	CHINA,Sichuan	iPhone 6s 13.3
+C0	SPK022	Male	30	CHINA,Sichuan	CHINA,Sichuan	iPhone 6s 13.3
+C0	SPK023	Male	22	CHINA,Guangdong	CHINA,Guangdong	HUAWEI RTE-AL00 Android 11
+C0	SPK024	Male	34	CHINA,Guangdong	CHINA,Guangdong	meizu meizu 17 Android 11
+C0	SPK023	Male	22	CHINA,Guangdong	CHINA,Guangdong	HUAWEI RTE-AL00 Android 11
+C0	SPK024	Male	34	CHINA,Guangdong	CHINA,Guangdong	meizu meizu 17 Android 11
+C0	SPK023	Male	22	CHINA,Guangdong	CHINA,Guangdong	HUAWEI RTE-AL00 Android 11
+C0	SPK025	Male	32	CHINA,Sichuan	CHINA,Sichuan	HUAWEI DUB-AL00a Android 8
+C0	SPK027	Male	34	CHINA,Guangdong	CHINA,Guangdong	XIAOMI
+C0	SPK028	Male	23	CHINA,Guangdong	CHINA,Guangdong	HUAWEI
+C0	SPK033	Male	25	CHINA,Guangdong	CHINA,Guangdong	iPhone 11 14.2
+C0	SPK040	Female	25	CHINA,Guangdong	CHINA,Guangdong	OPPO PEGM00 Android 11
+C0	SPK041	Male	38	CHINA,Sichuan	CHINA,Sichuan	HUAWEI DUB-AL00a Android 8
+C0	SPK030	Male	34	CHINA,Sichuan	CHINA,Sichuan	HUAWEI DUB-AL00a Android 8
+C0	SPK014	Male	22	CHINA,Guangdong	CHINA,Guangdong	iPhone
+C0	SPK024	Male	34	CHINA,Guangdong	CHINA,Guangdong	meizu meizu 17 Android 11
+C0	SPK026	Male	33	CHINA,Sichuan	CHINA,Sichuan	iPhone 6s 13.3
+C0	SPK031	Male	22	CHINA,Sichuan	CHINA,Sichuan	MEIZU
+C0	SPK001	Female	16	CHINA,Guangdong	CHINA,Guangdong	OPPO PDBM00 Android 9
+C0	SPK004	Female	27	CHINA,Sichuan	CHINA,Sichuan	OPPO PEGM00 Android 11
+C0	SPK006	Female	42	CHINA,Sichuan	CHINA,Sichuan	HUAWEI DUB-AL00a Android 8
+C0	SPK007	Female	30	CHINA,Shanxi	CHINA,Shanxi	OPPO PEGM00 Android 11
+C0	SPK007	Female	30	CHINA,Shanxi	CHINA,Shanxi	OPPO PEGM00 Android 11
+C0	SPK006	Female	42	CHINA,Sichuan	CHINA,Sichuan	HUAWEI DUB-AL00a Android 8
+C0	SPK004	Female	27	CHINA,Sichuan	CHINA,Sichuan	OPPO PEGM00 Android 11
+C0	SPK011	Female	21	CHINA,Guangdong	CHINA,Guangdong	iPhone XS Max 15.4.1
+C0	SPK017	Female	20	CHINA,Sichuan	CHINA,Sichuan	HUAWEI DUB-AL00a Android 8
+C0	SPK017	Female	20	CHINA,Sichuan	CHINA,Sichuan	HUAWEI DUB-AL00a Android 8
+C0	SPK019	Female	40	CHINA,Sichuan	CHINA,Sichuan	iPhone 6s 13.3
+C0	SPK020	Female	40	CHINA,Sichuan	CHINA,Sichuan	iPhone 6s 13.3
+C0	SPK036	Female	27	CHINA,Henan	CHINA,Henan	HUAWEI
+C0	SPK037	Female	26	CHINA,Guangdong	CHINA,Guangdong	OPPO PDBM00 Android 9
+C0	SPK036	Female	27	CHINA,Henan	CHINA,Henan	HUAWEI
+C0	SPK034	Female	17	CHINA,Guangdong	CHINA,Guangdong	vivo V2123A Android 11
+C0	SPK005	Male	30	CHINA,Sichuan	CHINA,Sichuan	HUAWEI DUB-AL00a Android 8
+C0	SPK005	Male	30	CHINA,Sichuan	CHINA,Sichuan	HUAWEI DUB-AL00a Android 8
+C0	SPK012	Female	22	CHINA,Guangdong	CHINA,Guangdong	Redmi M2007J22C Android 10
+C0	SPK018	Female	20	CHINA,Sichuan	CHINA,Sichuan	xiaomi Redmi Note 4X Android 7
+C0	SPK018	Female	20	CHINA,Sichuan	CHINA,Sichuan	XIAOMI
+C0	SPK008	Female	25	CHINA,Henan	CHINA,Henan	HUAWEI
+C0	SPK035	Female	30	CHINA,Sichuan	CHINA,Sichuan	MEIZU
+C0	SPK008	Female	25	CHINA,Henan	CHINA,Henan	HUAWEI
+C0	SPK002	Male	23	CHINA,Henan	CHINA,Henan	iPhone X 15.2
+C0	SPK003	Male	27	CHINA,Henan	CHINA,Henan	iPhone XS 15.2.1
+C0	SPK009	Female	35	CHINA,Sichuan	CHINA,Sichuan	OPPO PEGM00 Android 11
+C0	SPK009	Female	35	CHINA,Sichuan	CHINA,Sichuan	OPPO PEGM00 Android 11
+C0	SPK015	Male	36	CHINA,Henan	CHINA,Henan	HUAWEI GLK-AL00 Android 10
+C0	SPK016	Male	40	CHINA,Henan	CHINA,Henan	OPPO PFJM10 Android 11
+C0	SPK016	Male	36	CHINA,Henan	CHINA,Henan	OPPO PFJM10 Android 11
+C0	SPK015	Male	36	CHINA,Henan	CHINA,Henan	HUAWEI GLK-AL00 Android 10
+C0	SPK021	Male	30	CHINA,Sichuan	CHINA,Sichuan	HUAWEI DUB-AL00a Android 8
+C0	SPK021	Male	30	CHINA,Sichuan	CHINA,Sichuan	HUAWEI DUB-AL00a Android 8
+C0	SPK022	Male	30	CHINA,Sichuan	CHINA,Sichuan	iPhone 6s 13.3
+C0	SPK022	Male	30	CHINA,Sichuan	CHINA,Sichuan	iPhone 6s 13.3
+C0	SPK023	Male	22	CHINA,Guangdong	CHINA,Guangdong	HUAWEI RTE-AL00 Android 11
+C0	SPK024	Male	34	CHINA,Guangdong	CHINA,Guangdong	meizu meizu 17 Android 11
+C0	SPK024	Male	34	CHINA,Guangdong	CHINA,Guangdong	meizu meizu 17 Android 11
+C0	SPK023	Male	22	CHINA,Guangdong	CHINA,Guangdong	HUAWEI RTE-AL00 Android 11
+C0	SPK025	Male	32	CHINA,Sichuan	CHINA,Sichuan	HUAWEI DUB-AL00a Android 8
+C0	SPK026	Male	33	CHINA,Sichuan	CHINA,Sichuan	iPhone 6s 13.3
+C0	SPK027	Male	34	CHINA,Guangdong	CHINA,Guangdong	XIAOMI
+C0	SPK028	Male	23	CHINA,Guangdong	CHINA,Guangdong	HUAWEI
+C0	SPK033	Male	27	CHINA,Guangdong	CHINA,Guangdong	iPhone 11 14.2
+C0	SPK003	Male	27	CHINA,Henan	CHINA,Henan	iPhone XS 15.2.1
+C0	SPK002	Male	23	CHINA,Henan	CHINA,Henan	iPhone X 15.2
+C0	SPK030	Male	34	CHINA,Sichuan	CHINA,Sichuan	HUAWEI DUB-AL00a Android 8
+C0	SPK030	Male	34	CHINA,Sichuan	CHINA,Sichuan	HUAWEI DUB-AL00a Android 8
+C0	SPK032	Male	26	CHINA,Sichuan	CHINA,Sichuan	MEIZU
+C0	SPK001	Female	16	CHINA,Guangdong	CHINA,Guangdong	OPPO PDBM00 Android 9
+C0	SPK004	Female	27	CHINA,Sichuan	CHINA,Sichuan	OPPO PEGM00 Android 11
+C0	SPK006	Female	42	CHINA,Sichuan	CHINA,Sichuan	HUAWEI DUB-AL00a Android 8
+C0	SPK007	Female	30	CHINA,Shanxi	CHINA,Shanxi	OPPO PEGM00 Android 11
+C0	SPK007	Female	30	CHINA,Shanxi	CHINA,Shanxi	OPPO PEGM00 Android 11
+C0	SPK006	Female	42	CHINA,Sichuan	CHINA,Sichuan	HUAWEI DUB-AL00a Android 8
+C0	SPK004	Female	27	CHINA,Sichuan	CHINA,Sichuan	OPPO PEGM00 Android 11
+C0	SPK010	Female	29	CHINA,Guangdong	CHINA,Guangdong	iPhone
+C0	SPK019	Female	40	CHINA,Sichuan	CHINA,Sichuan	iPhone 6s 13.3
+C0	SPK020	Female	40	CHINA,Sichuan	CHINA,Sichuan	iPhone 6s 13.3
+C0	SPK036	Female	27	CHINA,Henan	CHINA,Henan	HUAWEI
+C0	SPK037	Female	28	CHINA,Henan	CHINA,Henan	OPPO PDBM00 Android 9
+C0	SPK036	Female	27	CHINA,Henan	CHINA,Henan	HUAWEI
+C0	SPK034	Female	17	CHINA,Guangdong	CHINA,Guangdong	vivo V2123A Android 11
+C0	SPK005	Male	30	CHINA,Sichuan	CHINA,Sichuan	HUAWEI DUB-AL00a Android 8
+C0	SPK005	Male	30	CHINA,Sichuan	CHINA,Sichuan	HUAWEI DUB-AL00a Android 8
+C0	SPK005	Male	30	CHINA,Sichuan	CHINA,Sichuan	HUAWEI DUB-AL00a Android 8
+C0	SPK008	Female	25	CHINA,Henan	CHINA,Henan	HUAWEI
+C0	SPK039	Female	28	CHINA,Guangdong	CHINA,Guangdong	HUAWEI
+C0	SPK008	Female	25	CHINA,Henan	CHINA,Henan	HUAWEI
+C0	SPK002	Male	23	CHINA,Henan	CHINA,Henan	iPhone X 15.2
+C0	SPK003	Male	27	CHINA,Henan	CHINA,Henan	iPhone XS 15.2.1
+C0	SPK009	Female	35	CHINA,Sichuan	CHINA,Sichuan	OPPO PEGM00 Android 11
+C0	SPK013	Male	22	CHINA,Guangdong	CHINA,Guangdong	iPhone
+C0	SPK014	Male	22	CHINA,Guangdong	CHINA,Guangdong	iPhone
+C0	SPK016	Male	40	CHINA,Henan	CHINA,Henan	OPPO PFJM10 Android 11
+C0	SPK016	Male	36	CHINA,Henan	CHINA,Henan	OPPO PFJM10 Android 11
+C0	SPK015	Male	36	CHINA,Henan	CHINA,Henan	HUAWEI GLK-AL00 Android 10
+C0	SPK021	Male	30	CHINA,Sichuan	CHINA,Sichuan	HUAWEI DUB-AL00a Android 8
+C0	SPK021	Male	30	CHINA,Sichuan	CHINA,Sichuan	HUAWEI DUB-AL00a Android 8
+C0	SPK022	Male	30	CHINA,Sichuan	CHINA,Sichuan	iPhone 6s 13.3
+C0	SPK022	Male	30	CHINA,Sichuan	CHINA,Sichuan	iPhone 6s 13.3
+C0	SPK003	Male	27	CHINA,Henan	CHINA,Henan	iPhone XS 15.2.1
+C0	SPK002	Male	23	CHINA,Henan	CHINA,Henan	iPhone X 15.2
+C0	SPK030	Male	34	CHINA,Sichuan	CHINA,Sichuan	HUAWEI DUB-AL00a Android 8
+C0	SPK015	Male	36	CHINA,Henan	CHINA,Henan	HUAWEI GLK-AL00 Android 10
+C0	SPK004	Female	27	CHINA,Sichuan	CHINA,Sichuan	OPPO PEGM00 Android 11
+C0	SPK010	Female	27	CHINA,Henan	CHINA,Henan	OPPO
+C0	SPK011	Female	21	CHINA,Guangdong	CHINA,Guangdong	iPhone XS Max 15.4.1
+C0	SPK019	Female	40	CHINA,Sichuan	CHINA,Sichuan	iPhone 6s 13.3
+C0	SPK020	Female	40	CHINA,Sichuan	CHINA,Sichuan	iPhone 6s 13.3
+C0	SPK037	Female	30	CHINA,Henan	CHINA,Henan	OPPO PDBM00 Android 9
+C0	SPK036	Female	27	CHINA,Henan	CHINA,Henan	HUAWEI
+C0	SPK005	Male	30	CHINA,Sichuan	CHINA,Sichuan	HUAWEI DUB-AL00a Android 8
+C0	SPK029	Female	26	CHINA,Henan	CHINA,Henan	iPhone
+C0	SPK012	Female	22	CHINA,Guangdong	CHINA,Guangdong	Redmi M2007J22C Android 10
+C0	SPK038	Female	21	CHINA,Henan	CHINA,Henan	OPPO
+C0	SPK008	Female	25	CHINA,Henan	CHINA,Henan	HUAWEI
+C0	SPK009	Female	35	CHINA,Sichuan	CHINA,Sichuan	OPPO PEGM00 Android 11
+C0	SPK013	Male	22	CHINA,Guangdong	CHINA,Guangdong	iPhone
+C0	SPK014	Male	22	CHINA,Guangdong	CHINA,Guangdong	iPhone
+C0	SPK015	Male	36	CHINA,Henan	CHINA,Henan	HUAWEI GLK-AL00 Android 10
+C0	SPK016	Male	40	CHINA,Henan	CHINA,Henan	OPPO PFJM10 Android 11
+C0	SPK003	Male	27	CHINA,Henan	CHINA,Henan	iPhone XS 15.2.1
+C0	SPK002	Male	23	CHINA,Henan	CHINA,Henan	iPhone X 15.2
+C0	SPK030	Male	34	CHINA,Sichuan	CHINA,Sichuan	HUAWEI DUB-AL00a Android 8
+C0	SPK019	Female	40	CHINA,Sichuan	CHINA,Sichuan	iPhone 6s 13.3
+C0	SPK020	Female	40	CHINA,Sichuan	CHINA,Sichuan	iPhone 6s 13.3
+C0	SPK036	Female	27	CHINA,Henan	CHINA,Henan	HUAWEI
+C0	SPK008	Female	25	CHINA,Henan	CHINA,Henan	HUAWEI
